@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="header-ecored">
+        <h1>3. Características de las fallas de las redes CAN BUS</h1>
+    </div>
+    <div class="jumbotron bg-white">
+        <p>La verificación física de la red radica en la función de los resistores, lo que se busca al final del proceso es que en el encuentro de líneas se destruyan las señales que se puedan reflejar (ecos) sin que perturben las otras emisiones de señales dadas por el sistema; a continuación, lo que debe arrojar el procedimiento:
+        <div class="row mt-5">
+            <div class="col-12 col-md-4">
+                <div class="card span-color_1">
+                    <div class="card-body">
+                        <p>Señal correcta de la red CAN BUS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>Al analizar la señal de CAN BUS se hace necesario compararla con una señal conocida en buen estado, dichas señales son: la señal CAN-L y la señal CAN-H.</p>
+        <p>La señal CAN-L presenta unas medidas de entre 1,25 Volts a 2,50 Volts y la señal CAN-H entre 2,50 Volts y 3,75 Volts, suficientes para realizar la comparación y obtener la correcta señal.</p>
+        <p>Cuando se obtiene una señal correcta, esta tiene las siguientes características: es limpia y sin la presencia de ruidos o interferencias, a la imagen a continuación muestra dicha señal, que ha sido arrojada por la Red de CAN BUS.</p><img class="mt-5 img-a img-fluid" src="assets/images/pages/tema_3/img_1.png" />
+        <div class="row mt-5">
+            <div class="col-12 col-md-5">
+                <div class="card span-color_1">
+                    <div class="card-body">
+                        <p>Corto circuito entre las líneas CAN-H y CAN-L</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>De otra parte, puede suceder que no se dé una buena comunicación entre las líneas CAN-H y CAN-L. En caso de que las dos líneas del Bus se toquen, sus tensiones se promedian, lo anterior con la intención de saber la tensión resultante, generalmente, cuando sucede algo así la tensión resultante será de 2,5 Volts.</p>
+        <p>Hay que tener en cuenta que, si la medida solo se hace con voltímetro, este será el voltaje obtenido cuando exista un buen funcionamiento. </p>
+        <p>Una forma de revisar fallas resultantes entre líneas es a través del uso de un osciloscopio. La señal medida en el osciloscopio como se ve en la imagen, genera una línea constante en 2,5 Volts, lo cual representa la falla analizada, por tanto, esta falla hará que se pierda la comunicación completamente entre las líneas. El grafico muestra como se vería en el tablero el cortocircuito entre las líneas.</p><img class="mt-5 img-a img-fluid" src="assets/images/pages/tema_3/img_2.png" />
+        <div class="jumbotron jum-color_2 mt-5">
+            <div class="row justify-content-center mt-5">
+                <div class="col-auto"><img class="img-fluid" src="assets/images/pages/tema_3/img_3.png" /></div>
+                <div class="col">
+                    <p><strong>¿Qué pasa cuando se cortocircuita cada línea, o se presenta una tensión?</strong> </p>
+                    <p>A continuación, se explica por separado el resultado y se muestran visualmente cómo se visualiza en el osciloscopio.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 col-md-5">
+                <div class="card span-color_1">
+                    <div class="card-body">
+                        <p>A) Cortocircuito a tierra de la línea CAN-H</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>Si el circuito CAN-H se cortocircuita a tierra, ocasiona que tanto la señal de CAN-H como CAN-L la señal sea baja 0 Volts y de igual manera la comunicación. En el tablero la imagen se vería de la siguiente manera:</p><img class="mt-5 img-a img-fluid" src="assets/images/pages/tema_3/img_4.png" />
+        <div class="row mt-5">
+            <div class="col-12 col-md-5">
+                <div class="card span-color_1">
+                    <div class="card-body">
+                        <p>B) Corto a tierra de la línea CAN-L</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>Si el circuito CAN-L se cortocircuita a tierra su señal será baja 0 Volts. La señal pico de CAN-H tendrá cerca de 3,0 Volts, pero su baja tensión llegará a 0 Volts, en lugar de 2,5 Volts como es lo normal. La grafica muestra esa baja en los picos, por debajo de la línea. </p><img class="mt-5 img-a img-fluid" src="assets/images/pages/tema_3/img_5.png" />
+        <div class="row mt-5">
+            <div class="col-12 col-md-5">
+                <div class="card span-color_1">
+                    <div class="card-body">
+                        <p>C) Corto a tensión de la línea CAN-H</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>También puede presentarse el caso de un cortocircuito de la línea CAN-H a tensión de batería B+. En el oscilograma la tensión es de 12,0 Volts, en este caso tal como se muestra en el tablero la comunicación se transmite con dificultad.</p><img class="mt-5 img-a img-fluid" src="assets/images/pages/tema_3/img_6.png" />
+        <div class="row mt-5">
+            <div class="col-12 col-md-5">
+                <div class="card span-color_1">
+                    <div class="card-body">
+                        <p>D) Corto a voltaje B+ en la línea CAN-L</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>Si la línea de CAN-L, se encuentra en cortocircuito a batería (B+), los dos circuitos CAN-H y CAN-L se alinean a 12,0 Volts y no hay transmisión de mensajes, por tanto, los picos son negativos y se muestran por debajo de la línea.</p><img class="mt-5 img-a img-fluid" src="assets/images/pages/tema_3/img_7.png" />
+        <div class="row mt-5">
+            <div class="col-12 col-md-5">
+                <div class="card span-color_1">
+                    <div class="card-body">
+                        <p>E) Señal corrupta del circuito CAN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>El par de líneas del Bus (CAN-L y CAN-H) se encuentran entorchadas, es decir sus cuerdas están cubiertas la una con la otra, lo que permite anular la probabilidad que su señal pueda ser interferida por señales como las del alternador, el sistema de alta tensión del encendido, motores o solenoides en general.</p>
+        <p>Sin embargo, cualquier debilidad del sistema puede ser aprovechada para que estas señales se filtren en las comunicaciones anulando la credibilidad de los mensajes, lo que se conoce como señal corrupta del circuito CAN.</p>
+        <p>Hay que tener en cuenta que cuando el técnico tome las señales, debe revisar muy bien el entorchamiento, porque los cables en mal estado del osciloscopio pueden mostrar señales corruptas sin estarlo. De igual manera, debe fijarse que la puesta de la tierra de los cables genere una señal conocida y firme.</p><img class="mt-5 img-a img-fluid" src="assets/images/pages/tema_3/img_8.png" />
+        <p class="mt-5">Para complementar la información favor visualizar el siguiente video: <strong>Reconocer las diferentes fallas de la señal CAN BUS</strong></p>
+        <div class="embed-responsive embed-responsive-16by9 mt-5"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/bv8zTM9mZZ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+        </p>
+    </div>
+</div>

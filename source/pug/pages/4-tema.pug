@@ -1,0 +1,34 @@
+.container
+    .header-ecored
+        h1 4.Técnicas de toma de señal
+    .jumbotron.bg-white
+        p El primer punto para tomar las señales CAN BUS es en el conector de diagnóstico. 
+        p.mt-0 La ubicación del conector de diagnóstico es en el tablero, debajo de la dirección.
+        p.mt-0 Renault también puede ubicar el DLC en la guantera o en la consola.
+
+        img.mt-5.img-a(src="assets/images/pages/tema_4/img_1.png").img-fluid
+
+        p.mt-5 Se deben ubicar los pines para CAN-H pin 6 y CAN-L pin 14 y proceder a instalar las puntas de prueba del osciloscopio.
+
+        p Si el vehículo cuenta con interfaz (Gateway), las tomas deben hacerse desde la red para no confundir las señales de tracción y confort.
+
+        p Las puntas de prueba utilizadas deben ser lo suficientemente delgadas para no exceder el ajuste de los pines hembra del conector de diagnóstico. De lo contrario se pueden ampliar y provocar problemas de fallas en la conectividad de la herramienta de exploración.
+
+        p También se pueden tomar las señales directamente en los módulos de la red.
+
+        .row.justify-content-center.mt-5
+            .col.jum-color_1
+                p.mt-5 En la fotografía se observa la conexión de las puntas de los dos canales del osciloscopio y por la necesidad se retiraron los demás conectores del ECM y previamente el negativo de la batería.
+
+                p Así mismo, se identifican los pines en los demás módulos para realizar la medición en ellos.
+
+            .col-auto
+                img(src="assets/images/pages/tema_4/img_2.png").img-fluid
+
+        .row.justify-content-center.mt-5
+            .col-auto
+                img(src="assets/images/pages/tema_4/img_3.png").img-fluid
+            .col.jum-color_2
+                p.mt-5 De igual manera se puede medir en cada módulo en las cavidades asignadas de CAN-H y CAN-L, hasta encontrar la ubicación de los resistores.
+
+                p En ocasiones, la falla de la red puede ser una resistencia y con esta medición directa, si no se conoce la ubicación de los resistores, pueden ser identificados.
