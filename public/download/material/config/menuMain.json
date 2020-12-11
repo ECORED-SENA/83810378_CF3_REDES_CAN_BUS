@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "fa fa-home",
+    "slug": "external",
+    "title": "Volver al inicio",
+    "path": "index.html"
+  },  
+  { 
+    "id": 1,
+    "icon": "fa fa-file-text",
+    "slug": "fundamentos",
+    "title": "1. Fundamentos de métodos de análisis de fallas.",
+    "breadcrumb": ["Inicio","Tema 1"],
+    "path": "pages/1-tema.html"  
+  },
+  { 
+    "id": 1,
+    "icon": "fa fa-play-circle",
+    "slug": "red",
+    "title": "2. Técnicas de la verificación física de la red",
+    "breadcrumb": ["Inicio","Tema 2"],
+    "path": "pages/2-tema.html"
+  },
+  { 
+    "id": 1,
+    "icon": "fa fa-play-circle",
+    "slug": "fallas",
+    "title": "3. Características de las fallas de las redes CAN BUS",
+    "breadcrumb": ["Inicio","Tema 3"],
+    "path": "pages/3-tema.html"
+  }
+]
